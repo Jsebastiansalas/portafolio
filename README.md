@@ -40,7 +40,7 @@ Definida en variables CSS al inicio de `style.css`:
 - [Banco Acme](https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2)
 - [Fashion App](https://github.com/Jsebastiansalas/app_de_ecommerce_de_ropa)
 
-## Contacto
+## mi Contacto
 
 - juansebastiansalas29@gmail.com
 - [github.com/Jsebastiansalas](https://github.com/Jsebastiansalas)
