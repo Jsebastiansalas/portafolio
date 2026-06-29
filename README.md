@@ -1,6 +1,6 @@
 # Portafolio — Sebastian Salas
 
-Portafolio personal de Juan Sebastián Salas Torres, desarrollador de software.
+Portafolio personal de Juan Sebastián Salas Torres desarrollador de software.
 Construido con HTML, CSS y JavaScript puro, sin frameworks.
 
 ## Estructura
