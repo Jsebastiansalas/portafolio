@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sebastian Salas — Desarrollador de Software especializado en frontend, inteligencia artificial y bases de datos.">
+  <!-- preconnect resuelve el DNS de las fuentes antes de que el parser las necesite -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <title>Sebastian Salas | Desarrollador de Software</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <header class="header" role="banner" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <ul class="nav__links" role="list" id="nav-links">
+        <li><a href="#sobre-mi"    class="nav__link">Sobre mí</a></li>
+        <li><a href="#proyectos"   class="nav__link">Proyectos</a></li>
+        <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+        <li><a href="#contacto"    class="nav__link">Contacto</a></li>
+      </ul>
+
+      <!-- las tres líneas se animan a × cuando aria-expanded="true" -->
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="hero">
+      <!-- canvas de partículas: se dibuja vía JS, es decorativo -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero__container">
+        <div class="hero__text">
+          <p class="hero__eyebrow">
+            <span class="hero__eyebrow-line"></span>
+            Desarrollador de Software
+          </p>
+          <h1 class="hero__name">
+            Sebastian<br>
+            <span class="hero__name-highlight">Salas</span>
+          </h1>
+          <p class="hero__tagline">
+            Frontend &nbsp;·&nbsp; <span class="accent">Inteligencia Artificial</span> &nbsp;·&nbsp; Bases de Datos
+          </p>
+          <p class="hero__desc">
+            Construyo soluciones digitales que combinan código limpio con experiencias
+            de usuario que realmente funcionan. Apasionado por la tecnología con capacidad
+            de resolver problemas e innovar.
+          </p>
+          <div class="hero__cta">
+            <a href="#proyectos" class="btn btn--primary">
+              Ver proyectos
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#contacto" class="btn btn--ghost">Contactarme</a>
+          </div>
+        </div>
+          <figure class="hero__photo">
+            <img src="./images/foto profesional.jpeg" width="300" height="300" alt="Sebastian Salas" loading="eager">
+          </figure>
+      </div>
+
+      <!-- indicador de scroll hacia abajo -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="sobre-mi" class="about section">
+      <div class="container">
+        <h2 class="section__title reveal">Sobre mí</h2>
+        <div class="about__grid">
+          <div class="about__body reveal">
+            <p>
+              Soy desarrollador de software con formación enfocada en tecnología y desarrollo
+              de aplicaciones. Desde que comencé mi proceso de formación, descubrí una gran
+              pasión por la capacidad que tiene la tecnología para resolver problemas reales
+              y generar soluciones innovadoras.
+            </p>
+            <p>
+              Me he especializado en <strong>desarrollo frontend</strong>,
+              <strong>inteligencia artificial</strong> y <strong>bases de datos</strong> —
+              tres áreas que, cuando se combinan bien, permiten construir productos que
+              marcan la diferencia.
+            </p>
+            <p>
+              Valoro el código legible: que alguien más pueda entenderlo sin necesitar
+              una reunión de media hora para descifrarlo.
+            </p>
+          </div>
+          <ul class="about__stats reveal" role="list">
+            <li class="stat-card">
+              <span class="stat-card__number">3+</span>
+              <span class="stat-card__label">Proyectos completados</span>
+            </li>
+            <li class="stat-card">
+              <span class="stat-card__number">5</span>
+              <span class="stat-card__label">Tecnologías dominadas</span>
+            </li>
+            <li class="stat-card">
+              <span class="stat-card__number">100%</span>
+              <span class="stat-card__label">Comprometido con el aprendizaje</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section id="proyectos" class="projects section">
+      <div class="container">
+        <h2 class="section__title reveal">Proyectos</h2>
+        <div class="projects__grid">
+
+          <article class="project-card reveal">
+            <div class="project-card__glow" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <div class="project-card__header">
+                <span class="project-card__num" aria-hidden="true">01</span>
+                <a href="https://github.com/Jsebastiansalas/-Proyecto_DeliveryBot_SebastianSalas"
+                   class="project-card__repo"
+                   target="_blank" rel="noopener"
+                   aria-label="Ver repositorio de DeliveryBot en GitHub">
+                  GitHub ↗
+                </a>
+              </div>
+              <h3>DeliveryBot</h3>
+              <p>
+                Bot de Telegram para pedidos en cafeterías y universidades. Elimina filas y errores:
+                el usuario escribe desde el celular y el sistema registra todo en Google Sheets
+                automáticamente a través de n8n.
+              </p>
+              <ul class="project-card__tags" role="list">
+                <li>n8n</li><li>Telegram API</li><li>Google Sheets</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: 100ms">
+            <div class="project-card__glow" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <div class="project-card__header">
+                <span class="project-card__num" aria-hidden="true">02</span>
+                <a href="https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2"
+                   class="project-card__repo"
+                   target="_blank" rel="noopener"
+                   aria-label="Ver repositorio de Banco Acme en GitHub">
+                  GitHub ↗
+                </a>
+              </div>
+              <h3>Banco Acme</h3>
+              <p>
+                SPA de autogestión bancaria construida con JavaScript Vanilla, sin frameworks
+                ni backend. Arquitectura de página única y persistencia local implementadas
+                desde cero.
+              </p>
+              <ul class="project-card__tags" role="list">
+                <li>JavaScript</li><li>HTML</li><li>CSS</li><li>SPA</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" style="--delay: 200ms">
+            <div class="project-card__glow" aria-hidden="true"></div>
+            <div class="project-card__content">
+              <div class="project-card__header">
+                <span class="project-card__num" aria-hidden="true">03</span>
+                <a href="https://github.com/Jsebastiansalas/app_de_ecommerce_de_ropa"
+                   class="project-card__repo"
+                   target="_blank" rel="noopener"
+                   aria-label="Ver repositorio de Fashion App en GitHub">
+                  GitHub ↗
+                </a>
+              </div>
+              <h3>Fashion App</h3>
+              <p>
+                App de ecommerce de ropa diseñada para explorar, ver detalles y comprar prendas.
+                UI fluida y visualmente atractiva, optimizada para dispositivos móviles con foco
+                en experiencia de compra.
+              </p>
+              <ul class="project-card__tags" role="list">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Mobile-first</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section id="habilidades" class="skills section">
+      <div class="container">
+        <h2 class="section__title reveal">Habilidades</h2>
+        <div class="skills__wrapper">
+
+          <ul class="skills__bars reveal" role="list">
+            <li class="skill-bar">
+              <div class="skill-bar__meta">
+                <span>HTML5</span><span>90%</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-width="90"></div>
+              </div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar__meta">
+                <span>CSS3</span><span>85%</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-width="85"></div>
+              </div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar__meta">
+                <span>JavaScript</span><span>80%</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-width="80"></div>
+              </div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar__meta">
+                <span>MySQL</span><span>70%</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-width="70"></div>
+              </div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar__meta">
+                <span>Python</span><span>65%</span>
+              </div>
+              <div class="skill-bar__track">
+                <div class="skill-bar__fill" data-width="65"></div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="skills__tags reveal" role="list" aria-label="Otras herramientas">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>n8n</li>
+            <li>Responsive Design</li>
+            <li>REST APIs</li>
+            <li>VS Code</li>
+            <li>Telegram API</li>
+            <li>Google Sheets API</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="contact section">
+      <div class="container">
+        <div class="contact__card reveal">
+          <div class="contact__glow" aria-hidden="true"></div>
+          <h2 class="section__title">¿Hablamos?</h2>
+          <p class="contact__desc">
+            Estoy disponible para nuevas oportunidades, proyectos freelance o simplemente
+            para intercambiar ideas sobre tecnología.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:juansebastiansalas29@gmail.com" class="contact__item">
+              <span class="contact__item-icon" aria-hidden="true">✉</span>
+              <span>juansebastiansalas29@gmail.com</span>
+            </a>
+            <a href="https://github.com/Jsebastiansalas" class="contact__item" target="_blank" rel="noopener">
+              <span class="contact__item-icon" aria-hidden="true">⌥</span>
+              <span>github.com/Jsebastiansalas</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <span>Sebastian Salas &mdash; <span id="year"></span></span>
+      <span>Diseñado y desarrollado con HTML, CSS &amp; JS</span>
+    </div>
+  </footer>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

@@ -1,46 +1,16 @@
-# Portafolio — Sebastian Salas
+# React + Vite
 
-Portafolio personal de Juan Sebastián Salas Torres desarrollador de software.
-Construido con HTML, CSS y JavaScript puro, sin frameworks.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Estructura
+Currently, two official plugins are available:
 
-```
-.
-├── index.html       # estructura de la página
-├── css/
-│   └── style.css     # estilos y diseño responsive
-└── js/
-    └── main.js        # menú móvil, link activo, animaciones de scroll
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Qué contiene
+## React Compiler
 
-- Sección hero con fondo de partículas animadas en `<canvas>`.
-- Menú de navegación responsive con resaltado de la sección activa al hacer scroll.
-- Animación de aparición (scroll reveal) en cada sección.
-- Barras de habilidades que se llenan al entrar en pantalla.
-- Tarjetas de proyecto con efecto de brillo (glow) al pasar el mouse.
-- Todas las animaciones respetan `prefers-reduced-motion`: si el usuario tiene
-  desactivadas las animaciones en su sistema, el sitio sigue siendo usable sin ellas.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Secciones: Inicio, Sobre mí, Proyectos, Habilidades, Contacto.
+## Expanding the Oxlint configuration
 
-## Paleta de colores
-
-Definida en variables CSS al inicio de `style.css`:
-
-- Fondo: carbón oscuro (`#0B0E14`)
-- Acento principal: naranja/ámbar (`#FF8A3D`) — botones y enlaces
-- Acento secundario: menta (`#5EEAD4`) — datos y etiquetas
-
-## Proyectos incluidos
-
-- [DeliveryBot](https://github.com/Jsebastiansalas/-Proyecto_DeliveryBot_SebastianSalas)
-- [Banco Acme](https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2)
-- [Fashion App](https://github.com/Jsebastiansalas/app_de_ecommerce_de_ropa)
-
-## Contacto
-
-- juansebastiansalas29@gmail.com
-- [github.com/Jsebastiansalas](https://github.com/Jsebastiansalas)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
