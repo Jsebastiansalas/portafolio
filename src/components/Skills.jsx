@@ -21,50 +21,57 @@ const Skills = () => {
           <div className="section-line mx-auto"></div>
         </motion.div>
 
-        <div className="glass-panel max-w-4xl mx-auto" style={{ padding: '2rem' }}>
-          <div className="skill-grid">
-            {skills.items.map((skill, index) => {
-              const Icon = skill.icon;
-              return (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="skill-item"
-                >
-                  <div className="skill-header">
-                    <div className="skill-name">
-                      <Icon size={18} style={{ color: 'var(--accent-cyan)' }} />
-                      <span>{skill.name}</span>
-                    </div>
-                    <span className="skill-percent">{skill.level}%</span>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', maxWidth: '1000px', margin: '0 auto' }}>
+          {skills.categories.map((category, index) => {
+            const Icon = category.icon;
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass-panel"
+                style={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+                  <div style={{ padding: '0.75rem', background: 'rgba(0,242,254,0.1)', borderRadius: '12px', color: 'var(--accent-cyan)' }}>
+                    <Icon size={24} />
                   </div>
-                  <div className="skill-bar-bg">
-                    <motion.div 
-                      className="skill-bar-fill"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.2 + (index * 0.1) }}
-                    />
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          <div className="tools-section">
-            <p className="tools-title">{skills.toolsTitle}</p>
-            <div className="tools-tags">
-              {skills.tools.map((tag, i) => (
-                <span key={i} className="tool-tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 600 }}>{category.name}</h3>
+                </div>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  {category.items.map((item, i) => (
+                    <span 
+                      key={i} 
+                      style={{ 
+                        padding: '0.5rem 1rem', 
+                        background: 'rgba(255,255,255,0.05)', 
+                        border: '1px solid var(--border-glass)', 
+                        borderRadius: '8px',
+                        fontSize: '0.9rem',
+                        color: 'var(--text-secondary)',
+                        transition: 'var(--transition)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.background = 'rgba(255,255,255,0.1)';
+                        e.target.style.color = 'white';
+                        e.target.style.borderColor = 'rgba(255,255,255,0.2)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.background = 'rgba(255,255,255,0.05)';
+                        e.target.style.color = 'var(--text-secondary)';
+                        e.target.style.borderColor = 'var(--border-glass)';
+                      }}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
         
       </div>

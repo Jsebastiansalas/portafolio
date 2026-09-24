@@ -1,248 +1,313 @@
-import { Code2, Database, BrainCircuit, Layout, GraduationCap, Globe } from 'lucide-react';
+import { Database, Layout, Terminal, Server } from 'lucide-react';
 
 export const portfolioData = {
   es: {
     navLinks: [
       { name: 'Inicio', href: '#inicio' },
       { name: 'Sobre mí', href: '#sobre-mi' },
-      { name: 'Educación', href: '#educacion' },
+      { name: 'Tecnologías', href: '#habilidades' },
       { name: 'Proyectos', href: '#proyectos' },
-      { name: 'Habilidades', href: '#habilidades' },
+      { name: 'Formación', href: '#formacion' },
+      { name: 'Superpoder', href: '#superpoder' },
       { name: 'Contacto', href: '#contacto' },
     ],
     hero: {
-      role: "Full Stack Developer",
-      firstName: "Sebastian",
+      role: "Desarrollador de Software Junior",
+      firstName: "Sebastián",
       lastName: "Salas",
-      tagline: "Frontend · Inteligencia Artificial · Bases de Datos",
-      description: "Estudiante interesado en tecnología y desarrollo de software, caracterizado por mi responsabilidad, disciplina y aprendizaje autodidacta.",
-      btnProjects: "Ver Proyectos",
-      btnCV: "Descargar CV",
+      tagline: "Construyendo soluciones, aprendiendo de cada error y creciendo hacia el análisis de datos.",
+      btnProjects: "Ver proyectos",
+      btnContact: "Contactarme",
+      btnCV: "Descargar Hoja de Vida",
+      cvUrl: "/Sebastian_Salas_CV.pdf"
     },
     about: {
       title: "Sobre",
       highlight: "Mí",
       paragraphs: [
-        "Soy un estudiante apasionado por el área de la tecnología y el desarrollo de software. Me considero una persona responsable, disciplinada y con un fuerte enfoque en el aprendizaje autodidacta.",
-        "Poseo sólidas capacidades para construir interfaces web dinámicas y funcionales. Mi experiencia incluye tecnologías esenciales como JavaScript, HTML5 y CSS3, complementadas con fundamentos en Python y gestión de bases de datos relacionales con MySQL.",
-        "Me caracterizo por trabajar bajo metodologías ágiles como Scrum, participando activamente en la planificación de Sprints. Utilizo de manera fluida herramientas de control de versiones y gestión de proyectos como Git, GitHub y Jira.",
+        "Me estoy formando como desarrollador de software junior. Soy un apasionado por la tecnología con un objetivo claro: especializarme en el área de análisis de datos en el futuro cercano.",
+        "Considero que mi mayor fortaleza es mi capacidad para aprender de los errores. Cada desafío o bug es una oportunidad para entender mejor los sistemas, buscar soluciones óptimas y seguir avanzando en mi carrera profesional."
       ],
-      stats: [
-        { number: "Scrum", label: "Metodologías Ágiles" },
-        { number: "100%", label: "Aprendizaje Autodidacta" },
-        { number: "A2", label: "Nivel de Inglés" },
-      ]
-    },
-    experience: {
-      title: "Mi",
-      highlight: "Educación",
-      desc: "Mi trayectoria académica y formación profesional.",
-      items: [
-        {
-          id: 1,
-          title: "Técnico en Programación Avanzada de Software",
-          company: "Campuslands",
-          period: "2026",
-          description: "Formación intensiva en desarrollo de software, abarcando desde lógica de programación hasta tecnologías web modernas y trabajo bajo metodologías ágiles."
-        },
-        {
-          id: 2,
-          title: "Bachiller Académico",
-          company: "Colegio Siglo XXI",
-          period: "2025",
-          description: "Estudios de educación secundaria y media."
-        }
+      strengthsTitle: "Mis Fortalezas",
+      strengths: [
+        "Trabajo en equipo",
+        "Comunicación",
+        "Adaptabilidad",
+        "Responsabilidad",
+        "Compromiso",
+        "Resolución de problemas",
+        "Aprendizaje constante"
       ]
     },
     skills: {
-      title: "Habilidades",
-      highlight: "Técnicas",
-      items: [
-        { name: "HTML5 & CSS3", level: 90, icon: Layout },
-        { name: "JavaScript", level: 85, icon: Code2 },
-        { name: "React", level: 40, icon: Globe },
-        { name: "MySQL", level: 75, icon: Database },
-        { name: "Python", level: 60, icon: Code2 },
-        { name: "Git & GitHub", level: 80, icon: BrainCircuit },
-      ],
-      toolsTitle: "Otras Herramientas y Habilidades",
-      tools: ['Scrum', 'Jira', 'Inglés A2', 'Desarrollo Web', 'Telegram API', 'Google Sheets API']
-    },
-    projects: {
-      title: "Mis",
-      highlight: "Proyectos",
-      items: [
+      title: "Habilidades y",
+      highlight: "Tecnologías",
+      categories: [
         {
-          id: "delivery-bot",
-          title: "DeliveryBot",
-          description: "Bot de Telegram para pedidos en cafeterías y universidades. Elimina filas y errores: el usuario escribe desde el celular y el sistema registra todo en Google Sheets automáticamente a través de n8n.",
-          tags: ["n8n", "Telegram API", "Google Sheets"],
-          githubUrl: "https://github.com/Jsebastiansalas/-Proyecto_DeliveryBot_SebastianSalas",
+          name: "Frontend",
+          icon: Layout,
+          items: ["HTML5", "CSS3", "JavaScript"]
         },
         {
-          id: "banco-acme",
-          title: "Banco Acme",
-          description: "SPA de autogestión bancaria construida con JavaScript Vanilla, sin frameworks ni backend. Arquitectura de página única y persistencia local implementadas desde cero.",
-          tags: ["JavaScript", "HTML", "CSS", "SPA"],
-          githubUrl: "https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2",
+          name: "Backend / Programación",
+          icon: Server,
+          items: ["Python", "Java"]
         },
         {
-          id: "fashion-app",
-          title: "Fashion App",
-          description: "App de ecommerce de ropa diseñada para explorar, ver detalles y comprar prendas. UI fluida y visualmente atractiva, optimizada para dispositivos móviles con foco en experiencia de compra.",
-          tags: ["HTML", "CSS", "JavaScript", "Mobile-first"],
-          githubUrl: "https://github.com/Jsebastiansalas/app_de_ecommerce_de_ropa",
+          name: "Herramientas",
+          icon: Terminal,
+          items: ["Git", "GitHub", "VS Code"]
         },
         {
-          id: "proyecto-sica",
-          title: "Proyecto SICA",
-          description: "Desarrollo y gestión de información. Implementación con tecnologías web para asegurar escalabilidad.",
-          tags: ["React", "JavaScript", "Frontend"],
-          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git",
-        },
-        {
-          id: "formula-1",
-          title: "Formula 1 App",
-          description: "Aplicación o visor de datos sobre la Formula 1. Diseño enfocado en la experiencia de usuario y visualización de datos.",
-          tags: ["JavaScript", "Web API", "CSS"],
-          githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git",
+          name: "Datos",
+          icon: Database,
+          items: ["SQL", "MySQL"]
         }
       ]
     },
+    projects: {
+      title: "Proyectos",
+      highlight: "Destacados",
+      items: [
+        {
+          id: "proyecto-sica",
+          title: "Proyecto SICA",
+          image: "/images/projects/sica.jpg",
+          description: "Sistema Integral de Control y Administración (SICA). Plataforma diseñada para la optimización de procesos internos, gestión de registros y control de flujo de datos con arquitectura modular y validaciones robustas.",
+          technologies: ["Java", "SQL", "Git", "Arquitectura Modular"],
+          myRole: "Desarrollador de Software",
+          learned: "Modelado relacional de datos, lógica de negocio robusta, control de excepciones y diseño de software estructurado.",
+          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git"
+        },
+        {
+          id: "formula-1",
+          title: "Formula 1 Analytics App",
+          image: "/images/projects/formula1.jpg",
+          description: "Aplicación interactiva de telemetría y métricas de Fórmula 1. Permite explorar resultados de carreras, clasificaciones mundiales de pilotos y escuderías, tiempos por vuelta y análisis de rendimiento en pista.",
+          technologies: ["JavaScript", "Python", "API REST", "Análisis de Datos"],
+          myRole: "Desarrollador & Integración de Datos",
+          learned: "Consumo e integración de APIs complejas, transformación y filtrado de grandes datasets y renderizado dinámico de estadísticas.",
+          githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git"
+        },
+        {
+          id: "acme-bank",
+          title: "Acme Bank",
+          image: "/images/projects/acme-bank.jpg",
+          description: "Plataforma de autogestión bancaria interactiva (SPA) construida con JavaScript puro. Permite apertura de cuentas, simulación de transacciones financieras en tiempo real y persistencia en el navegador.",
+          technologies: ["JavaScript Vanilla", "HTML5", "CSS3", "LocalStorage"],
+          myRole: "Desarrollador Frontend",
+          learned: "Manipulación avanzada del DOM, arquitectura SPA sin frameworks y gestión del estado y persistencia con LocalStorage.",
+          githubUrl: "https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2"
+        },
+        {
+          id: "delivery-bot",
+          title: "DeliveryBot Telegram",
+          image: "/images/projects/deliverybot.jpg",
+          description: "Bot automatizado de Telegram diseñado para agilizar pedidos en cafeterías universitarias. Registra órdenes, procesa menús interactivos y sincroniza la base de datos en tiempo real mediante webhooks.",
+          technologies: ["n8n", "Telegram Bot API", "Google Sheets API", "Webhooks"],
+          myRole: "Desarrollador / Integrador de Automatizaciones",
+          learned: "Orquestación de flujos de trabajo automatizados, manejo de eventos en tiempo real con webhooks y conexión de servicios cloud.",
+          githubUrl: "https://github.com/Jsebastiansalas/-Proyecto_DeliveryBot_SebastianSalas"
+        }
+      ]
+    },
+    formation: {
+      title: "Formación y",
+      highlight: "Trayectoria",
+      items: [
+        {
+          period: "2025",
+          title: "Bachiller Académico",
+          institution: "Colegio Siglo XXI",
+          image: "/images/education/bachiller.jpg",
+          desc: "Formación integral con bases sólidas en razonamiento lógico, matemáticas y método científico que despertaron mi pasión por el desarrollo de software."
+        },
+        {
+          period: "2025 - 2026",
+          title: "Tecnólogo en Desarrollo de Software (Full Stack)",
+          institution: "Campuslands",
+          image: "/images/education/campuslands.jpg",
+          desc: "Formación intensiva de alto rendimiento orientada a la industria. Dominio de algoritmos, estructuras de datos, programación Frontend & Backend, bases de datos y metodologías ágiles Scrum."
+        }
+      ]
+    },
+    superpower: {
+      question: "¿Qué hago tan bien que podría ayudar a otros con eso?",
+      answer: "Aprender de los errores.",
+      description: "No le temo a equivocarme porque entiendo que cada error es una oportunidad invaluable. Cuando algo falla, me detengo a entender qué sucedió, busco la solución de raíz y me aseguro de que ese aprendizaje se convierta en un nuevo escalón para seguir avanzando."
+    },
+    roadmap: {
+      title: "¿Hacia dónde",
+      highlight: "voy?",
+      statement: "Mi objetivo es crecer como desarrollador de software y especializarme progresivamente en análisis de datos."
+    },
     contact: {
-      title: "¿Hablamos?",
-      desc: "Estoy disponible para nuevas oportunidades, proyectos o simplemente para intercambiar ideas sobre tecnología.",
-      emailBtn: "Envíame un correo",
-      githubBtn: "Mi GitHub",
+      title: "¿Tienes un proyecto o quieres conocer más sobre mi trabajo?",
+      highlight: "Contáctame",
+      name: "Sebastián Salas",
       email: "juansebastiansalas29@gmail.com",
+      cvText: "Descargar CV Completo",
+      cvUrl: "/Sebastian_Salas_CV.pdf",
       github: "https://github.com/Jsebastiansalas"
     },
     footer: {
       copy: "Sebastian Salas. Todos los derechos reservados.",
-      madeWith: "Diseñado y desarrollado con"
+      madeWith: "Diseñado y desarrollado con dedicación"
     }
   },
   
-  // ENGLISH TRANSLATION
   en: {
     navLinks: [
       { name: 'Home', href: '#inicio' },
       { name: 'About me', href: '#sobre-mi' },
-      { name: 'Education', href: '#educacion' },
-      { name: 'Projects', href: '#proyectos' },
       { name: 'Skills', href: '#habilidades' },
+      { name: 'Projects', href: '#proyectos' },
+      { name: 'Education', href: '#formacion' },
+      { name: 'Superpower', href: '#superpoder' },
       { name: 'Contact', href: '#contacto' },
     ],
     hero: {
-      role: "Full Stack Developer",
-      firstName: "Sebastian",
+      role: "Junior Software Developer",
+      firstName: "Sebastián",
       lastName: "Salas",
-      tagline: "Frontend · Artificial Intelligence · Databases",
-      description: "Student interested in technology and software development, characterized by my responsibility, discipline, and self-directed learning.",
-      btnProjects: "View Projects",
-      btnCV: "Download CV",
+      tagline: "Building solutions, learning from every mistake, and growing towards data analysis.",
+      btnProjects: "View projects",
+      btnContact: "Contact me",
+      btnCV: "Download Resume (CV)",
+      cvUrl: "/Sebastian_Salas_CV.pdf"
     },
     about: {
       title: "About",
       highlight: "Me",
       paragraphs: [
-        "I am a student passionate about technology and software development. I consider myself a responsible, disciplined person with a strong focus on self-directed learning.",
-        "I have solid skills to build dynamic and functional web interfaces. My expertise includes essential technologies like JavaScript, HTML5, and CSS3, complemented by Python fundamentals and relational database management with MySQL.",
-        "I stand out for working under agile methodologies like Scrum, actively participating in Sprint planning. I fluently use version control and project management tools like Git, GitHub, and Jira.",
+        "I am training as a junior software developer. I am passionate about technology with a clear goal: to specialize in the field of data analysis in the near future.",
+        "I consider my greatest strength to be my ability to learn from mistakes. Every challenge or bug is an opportunity to better understand systems, find optimal solutions, and keep moving forward in my professional career."
       ],
-      stats: [
-        { number: "Scrum", label: "Agile Methodologies" },
-        { number: "100%", label: "Self-taught Learner" },
-        { number: "A2", label: "English Level" },
-      ]
-    },
-    experience: {
-      title: "My",
-      highlight: "Education",
-      desc: "My academic journey and professional training.",
-      items: [
-        {
-          id: 1,
-          title: "Technical Degree in Advanced Software Programming",
-          company: "Campuslands",
-          period: "2026",
-          description: "Intensive training in software development, covering everything from programming logic to modern web technologies and agile teamwork."
-        },
-        {
-          id: 2,
-          title: "High School Diploma",
-          company: "Colegio Siglo XXI",
-          period: "2025",
-          description: "High school education completed."
-        }
+      strengthsTitle: "My Strengths",
+      strengths: [
+        "Teamwork",
+        "Communication",
+        "Adaptability",
+        "Responsibility",
+        "Commitment",
+        "Problem Solving",
+        "Continuous Learning"
       ]
     },
     skills: {
-      title: "Technical",
-      highlight: "Skills",
-      items: [
-        { name: "HTML5 & CSS3", level: 90, icon: Layout },
-        { name: "JavaScript", level: 85, icon: Code2 },
-        { name: "React", level: 40, icon: Globe },
-        { name: "MySQL", level: 75, icon: Database },
-        { name: "Python", level: 60, icon: Code2 },
-        { name: "Git & GitHub", level: 80, icon: BrainCircuit },
-      ],
-      toolsTitle: "Other Tools and Skills",
-      tools: ['Scrum', 'Jira', 'English A2', 'Web Development', 'Telegram API', 'Google Sheets API']
-    },
-    projects: {
-      title: "My",
-      highlight: "Projects",
-      items: [
+      title: "Skills &",
+      highlight: "Technologies",
+      categories: [
         {
-          id: "delivery-bot",
-          title: "DeliveryBot",
-          description: "Telegram bot for orders in cafeterias and universities. Eliminates lines and errors: the user types from their phone and the system records everything in Google Sheets automatically through n8n.",
-          tags: ["n8n", "Telegram API", "Google Sheets"],
-          githubUrl: "https://github.com/Jsebastiansalas/-Proyecto_DeliveryBot_SebastianSalas",
+          name: "Frontend",
+          icon: Layout,
+          items: ["HTML5", "CSS3", "JavaScript"]
         },
         {
-          id: "banco-acme",
-          title: "Acme Bank",
-          description: "Banking self-management SPA built with Vanilla JavaScript, no frameworks or backend. Single page architecture and local persistence implemented from scratch.",
-          tags: ["JavaScript", "HTML", "CSS", "SPA"],
-          githubUrl: "https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2",
+          name: "Backend / Programming",
+          icon: Server,
+          items: ["Python", "Java"]
         },
         {
-          id: "fashion-app",
-          title: "Fashion App",
-          description: "Clothing ecommerce app designed to explore, view details, and buy clothes. Fluid and visually attractive UI, optimized for mobile devices with a focus on the shopping experience.",
-          tags: ["HTML", "CSS", "JavaScript", "Mobile-first"],
-          githubUrl: "https://github.com/Jsebastiansalas/app_de_ecommerce_de_ropa",
+          name: "Tools",
+          icon: Terminal,
+          items: ["Git", "GitHub", "VS Code"]
         },
         {
-          id: "proyecto-sica",
-          title: "SICA Project",
-          description: "Information development and management. Implementation with web technologies to ensure scalability.",
-          tags: ["React", "JavaScript", "Frontend"],
-          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git",
-        },
-        {
-          id: "formula-1",
-          title: "Formula 1 App",
-          description: "Application or data viewer for Formula 1. Design focused on user experience and data visualization.",
-          tags: ["JavaScript", "Web API", "CSS"],
-          githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git",
+          name: "Data",
+          icon: Database,
+          items: ["SQL", "MySQL"]
         }
       ]
     },
+    projects: {
+      title: "Featured",
+      highlight: "Projects",
+      items: [
+        {
+          id: "proyecto-sica",
+          title: "Proyecto SICA",
+          image: "/images/projects/sica.jpg",
+          description: "Integral Control and Management System (SICA). Platform designed for internal workflow optimization, records management, and data stream validation with modular architecture.",
+          technologies: ["Java", "SQL", "Git", "Modular Architecture"],
+          myRole: "Software Developer",
+          learned: "Relational data modeling, robust business logic, exception handling, and structured software architecture.",
+          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git"
+        },
+        {
+          id: "formula-1",
+          title: "Formula 1 Analytics App",
+          image: "/images/projects/formula1.jpg",
+          description: "Interactive Formula 1 telemetry and statistics web application. Explore race results, world driver and constructor standings, lap timings, and track performance analytics.",
+          technologies: ["JavaScript", "Python", "REST API", "Data Analytics"],
+          myRole: "Developer & Data Integration",
+          learned: "Complex sports API consumption, data manipulation and filtering of large datasets, and dynamic statistics rendering.",
+          githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git"
+        },
+        {
+          id: "acme-bank",
+          title: "Acme Bank",
+          image: "/images/projects/acme-bank.jpg",
+          description: "Interactive single-page banking application (SPA) built with vanilla JavaScript. Features account opening, real-time transaction simulation, and persistent browser storage.",
+          technologies: ["Vanilla JavaScript", "HTML5", "CSS3", "LocalStorage"],
+          myRole: "Frontend Developer",
+          learned: "Advanced DOM manipulation, framework-free SPA architecture, and state persistence with LocalStorage.",
+          githubUrl: "https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2"
+        },
+        {
+          id: "delivery-bot",
+          title: "DeliveryBot Telegram",
+          image: "/images/projects/deliverybot.jpg",
+          description: "Automated Telegram bot created to speed up food ordering in university cafeterias. Registers customer orders, processes interactive menus, and synchronizes live database via webhooks.",
+          technologies: ["n8n", "Telegram Bot API", "Google Sheets API", "Webhooks"],
+          myRole: "Developer / Automation Integrator",
+          learned: "Automated workflow orchestration, real-time event processing with webhooks, and cloud service integration.",
+          githubUrl: "https://github.com/Jsebastiansalas/-Proyecto_DeliveryBot_SebastianSalas"
+        }
+      ]
+    },
+    formation: {
+      title: "Education &",
+      highlight: "Trajectory",
+      items: [
+        {
+          period: "2025",
+          title: "High School Diploma",
+          institution: "Colegio Siglo XXI",
+          image: "/images/education/bachiller.jpg",
+          desc: "Comprehensive education with solid foundations in logical reasoning, mathematics, and the scientific method that sparked my passion for software engineering."
+        },
+        {
+          period: "2025 - 2026",
+          title: "Technologist in Software Development (Full Stack)",
+          institution: "Campuslands",
+          image: "/images/education/campuslands.jpg",
+          desc: "High-performance industry-focused immersive program. Mastery of algorithms, data structures, Frontend & Backend programming, relational databases, and Scrum methodologies."
+        }
+      ]
+    },
+    superpower: {
+      question: "What do I do so well that I could help others with it?",
+      answer: "Learning from mistakes.",
+      description: "I am not afraid of making mistakes because I understand that every error is an invaluable opportunity. When something fails, I stop to understand what happened, look for the root solution, and make sure that this learning becomes a new step to keep moving forward."
+    },
+    roadmap: {
+      title: "Where am I",
+      highlight: "going?",
+      statement: "My goal is to grow as a software developer and progressively specialize in data analysis."
+    },
     contact: {
-      title: "Let's Talk?",
-      desc: "I am available for new opportunities, freelance projects, or just to exchange ideas about technology.",
-      emailBtn: "Send me an email",
-      githubBtn: "My GitHub",
+      title: "Do you have a project or want to know more about my work?",
+      highlight: "Contact me",
+      name: "Sebastián Salas",
       email: "juansebastiansalas29@gmail.com",
+      cvText: "Download Full Resume",
+      cvUrl: "/Sebastian_Salas_CV.pdf",
       github: "https://github.com/Jsebastiansalas"
     },
     footer: {
       copy: "Sebastian Salas. All rights reserved.",
-      madeWith: "Designed and developed with"
+      madeWith: "Designed and developed with dedication"
     }
   }
 };

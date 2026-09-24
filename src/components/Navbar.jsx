@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, FileDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
@@ -31,20 +31,71 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+
+          {/* Quick CV Download in Navbar */}
+          <a
+            href="/Sebastian_Salas_CV.pdf"
+            download="Hoja_de_Vida_Sebastian_Salas.pdf"
+            className="nav-link"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '0.4rem 0.9rem',
+              borderRadius: '999px',
+              background: 'rgba(0, 242, 254, 0.1)',
+              border: '1px solid rgba(0, 242, 254, 0.3)',
+              color: 'var(--accent-cyan)',
+              fontWeight: 600,
+              fontSize: '0.85rem'
+            }}
+            title={language === 'es' ? 'Descargar Hoja de Vida' : 'Download CV'}
+          >
+            <FileDown size={14} /> CV
+          </a>
+
+          {/* Language Toggle */}
           <button 
             onClick={toggleLanguage} 
             className="nav-link" 
-            style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
+            style={{ 
+              background: 'none', 
+              border: 'none', 
+              cursor: 'pointer', 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '5px',
+              padding: '0.4rem 0.6rem',
+              borderRadius: '6px'
+            }}
             title="Cambiar idioma / Change language"
           >
-            <Globe size={16} /> {language === 'es' ? 'EN' : 'ES'}
+            <Globe size={16} /> <span style={{ fontWeight: 600 }}>{language === 'es' ? 'EN' : 'ES'}</span>
           </button>
         </nav>
 
         {/* Mobile Toggle */}
-        <div className="mobile-only" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <button onClick={toggleLanguage} style={{ background: 'none', border: 'none', color: 'white' }}>
-            <Globe size={20} />
+        <div className="mobile-only" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <a
+            href="/Sebastian_Salas_CV.pdf"
+            download="Hoja_de_Vida_Sebastian_Salas.pdf"
+            style={{
+              color: 'var(--accent-cyan)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              padding: '0.3rem 0.6rem',
+              borderRadius: '999px',
+              background: 'rgba(0, 242, 254, 0.1)',
+              fontSize: '0.8rem',
+              textDecoration: 'none',
+              fontWeight: 600
+            }}
+          >
+            <FileDown size={14} /> CV
+          </a>
+          <button onClick={toggleLanguage} style={{ background: 'none', border: 'none', color: 'white', display: 'flex', alignItems: 'center', gap: '2px' }}>
+            <Globe size={18} />
           </button>
           <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -71,6 +122,15 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <a 
+              href="/Sebastian_Salas_CV.pdf"
+              download="Hoja_de_Vida_Sebastian_Salas.pdf"
+              onClick={() => setIsOpen(false)}
+              className="mobile-nav-link"
+              style={{ color: 'var(--accent-cyan)', display: 'flex', alignItems: 'center', gap: '8px' }}
+            >
+              <FileDown size={18} /> {language === 'es' ? 'Descargar Hoja de Vida (PDF)' : 'Download Resume (PDF)'}
+            </a>
           </motion.nav>
         )}
       </AnimatePresence>
