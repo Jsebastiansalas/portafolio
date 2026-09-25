@@ -1,5 +1,7 @@
 import { Database, Layout, Terminal, Server } from 'lucide-react';
 
+const BASE = import.meta.env.BASE_URL;
+
 export const portfolioData = {
   es: {
     navLinks: [
@@ -19,7 +21,7 @@ export const portfolioData = {
       btnProjects: "Ver proyectos",
       btnContact: "Contactarme",
       btnCV: "Descargar Hoja de Vida",
-      cvUrl: "/Sebastian_Salas_CV.pdf"
+      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`
     },
     about: {
       title: "Sobre",
@@ -72,7 +74,7 @@ export const portfolioData = {
         {
           id: "proyecto-sica",
           title: "Proyecto SICA",
-          image: "/images/projects/sica.jpg",
+          image: `${BASE}images/projects/sica.jpg`,
           description: "Sistema Integral de Control y Administración (SICA). Plataforma diseñada para la optimización de procesos internos, gestión de registros y control de flujo de datos con arquitectura modular y validaciones robustas.",
           technologies: ["Java", "SQL", "Git", "Arquitectura Modular"],
           myRole: "Desarrollador de Software",
@@ -82,7 +84,7 @@ export const portfolioData = {
         {
           id: "formula-1",
           title: "Formula 1 Analytics App",
-          image: "/images/projects/formula1.jpg",
+          image: `${BASE}images/projects/formula1.jpg`,
           description: "Aplicación interactiva de telemetría y métricas de Fórmula 1. Permite explorar resultados de carreras, clasificaciones mundiales de pilotos y escuderías, tiempos por vuelta y análisis de rendimiento en pista.",
           technologies: ["JavaScript", "Python", "API REST", "Análisis de Datos"],
           myRole: "Desarrollador & Integración de Datos",
@@ -92,7 +94,7 @@ export const portfolioData = {
         {
           id: "acme-bank",
           title: "Acme Bank",
-          image: "/images/projects/acme-bank.jpg",
+          image: `${BASE}images/projects/acme-bank.jpg`,
           description: "Plataforma de autogestión bancaria interactiva (SPA) construida con JavaScript puro. Permite apertura de cuentas, simulación de transacciones financieras en tiempo real y persistencia en el navegador.",
           technologies: ["JavaScript Vanilla", "HTML5", "CSS3", "LocalStorage"],
           myRole: "Desarrollador Frontend",
@@ -102,7 +104,7 @@ export const portfolioData = {
         {
           id: "delivery-bot",
           title: "DeliveryBot Telegram",
-          image: "/images/projects/deliverybot.jpg",
+          image: `${BASE}images/projects/deliverybot.jpg`,
           description: "Bot automatizado de Telegram diseñado para agilizar pedidos en cafeterías universitarias. Registra órdenes, procesa menús interactivos y sincroniza la base de datos en tiempo real mediante webhooks.",
           technologies: ["n8n", "Telegram Bot API", "Google Sheets API", "Webhooks"],
           myRole: "Desarrollador / Integrador de Automatizaciones",
@@ -119,14 +121,14 @@ export const portfolioData = {
           period: "2025",
           title: "Bachiller Académico",
           institution: "Colegio Siglo XXI",
-          image: "/images/education/bachiller.jpg",
+          image: `${BASE}images/education/bachiller.jpg`,
           desc: "Formación integral con bases sólidas en razonamiento lógico, matemáticas y método científico que despertaron mi pasión por el desarrollo de software."
         },
         {
           period: "2025 - 2026",
           title: "Tecnólogo en Desarrollo de Software (Full Stack)",
           institution: "Campuslands",
-          image: "/images/education/campuslands.jpg",
+          image: `${BASE}images/education/campuslands.jpg`,
           desc: "Formación intensiva de alto rendimiento orientada a la industria. Dominio de algoritmos, estructuras de datos, programación Frontend & Backend, bases de datos y metodologías ágiles Scrum."
         }
       ]
@@ -147,7 +149,7 @@ export const portfolioData = {
       name: "Sebastián Salas",
       email: "juansebastiansalas29@gmail.com",
       cvText: "Descargar CV Completo",
-      cvUrl: "/Sebastian_Salas_CV.pdf",
+      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`,
       github: "https://github.com/Jsebastiansalas"
     },
     footer: {
@@ -174,7 +176,7 @@ export const portfolioData = {
       btnProjects: "View projects",
       btnContact: "Contact me",
       btnCV: "Download Resume (CV)",
-      cvUrl: "/Sebastian_Salas_CV.pdf"
+      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`
     },
     about: {
       title: "About",
@@ -227,7 +229,7 @@ export const portfolioData = {
         {
           id: "proyecto-sica",
           title: "Proyecto SICA",
-          image: "/images/projects/sica.jpg",
+          image: `${BASE}images/projects/sica.jpg`,
           description: "Integral Control and Management System (SICA). Platform designed for internal workflow optimization, records management, and data stream validation with modular architecture.",
           technologies: ["Java", "SQL", "Git", "Modular Architecture"],
           myRole: "Software Developer",
@@ -237,7 +239,7 @@ export const portfolioData = {
         {
           id: "formula-1",
           title: "Formula 1 Analytics App",
-          image: "/images/projects/formula1.jpg",
+          image: `${BASE}images/projects/formula1.jpg`,
           description: "Interactive Formula 1 telemetry and statistics web application. Explore race results, world driver and constructor standings, lap timings, and track performance analytics.",
           technologies: ["JavaScript", "Python", "REST API", "Data Analytics"],
           myRole: "Developer & Data Integration",
@@ -247,7 +249,7 @@ export const portfolioData = {
         {
           id: "acme-bank",
           title: "Acme Bank",
-          image: "/images/projects/acme-bank.jpg",
+          image: `${BASE}images/projects/acme-bank.jpg`,
           description: "Interactive single-page banking application (SPA) built with vanilla JavaScript. Features account opening, real-time transaction simulation, and persistent browser storage.",
           technologies: ["Vanilla JavaScript", "HTML5", "CSS3", "LocalStorage"],
           myRole: "Frontend Developer",
@@ -257,7 +259,7 @@ export const portfolioData = {
         {
           id: "delivery-bot",
           title: "DeliveryBot Telegram",
-          image: "/images/projects/deliverybot.jpg",
+          image: `${BASE}images/projects/deliverybot.jpg`,
           description: "Automated Telegram bot created to speed up food ordering in university cafeterias. Registers customer orders, processes interactive menus, and synchronizes live database via webhooks.",
           technologies: ["n8n", "Telegram Bot API", "Google Sheets API", "Webhooks"],
           myRole: "Developer / Automation Integrator",
@@ -274,14 +276,14 @@ export const portfolioData = {
           period: "2025",
           title: "High School Diploma",
           institution: "Colegio Siglo XXI",
-          image: "/images/education/bachiller.jpg",
+          image: `${BASE}images/education/bachiller.jpg`,
           desc: "Comprehensive education with solid foundations in logical reasoning, mathematics, and the scientific method that sparked my passion for software engineering."
         },
         {
           period: "2025 - 2026",
           title: "Technologist in Software Development (Full Stack)",
           institution: "Campuslands",
-          image: "/images/education/campuslands.jpg",
+          image: `${BASE}images/education/campuslands.jpg`,
           desc: "High-performance industry-focused immersive program. Mastery of algorithms, data structures, Frontend & Backend programming, relational databases, and Scrum methodologies."
         }
       ]
@@ -302,7 +304,7 @@ export const portfolioData = {
       name: "Sebastián Salas",
       email: "juansebastiansalas29@gmail.com",
       cvText: "Download Full Resume",
-      cvUrl: "/Sebastian_Salas_CV.pdf",
+      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`,
       github: "https://github.com/Jsebastiansalas"
     },
     footer: {

@@ -32,7 +32,7 @@ const About = () => {
                   style={{ width: '230px', height: '230px', borderRadius: '20px', overflow: 'hidden', border: '2px solid rgba(0, 242, 254, 0.4)', position: 'relative', zIndex: 10, boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)' }}
                 >
                   <img 
-                    src="/foto profesional.jpeg" 
+                    src={`${import.meta.env.BASE_URL}foto profesional.jpeg`} 
                     alt="Sebastian Salas"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     onError={(e) => { e.target.src = 'https://ui-avatars.com/api/?name=Sebastian+Salas&background=0D8ABC&color=fff&size=500' }}
@@ -53,7 +53,7 @@ const About = () => {
                 <motion.a 
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  href="/Sebastian_Salas_CV.pdf"
+                  href={`${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`}
                   download="Hoja_de_Vida_Sebastian_Salas.pdf"
                   className="btn"
                   style={{ 

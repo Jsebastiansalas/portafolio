@@ -54,7 +54,7 @@ const Contact = () => {
                 <FileDown size={20} />
               </div>
               <a 
-                href={contact.cvUrl || "/Sebastian_Salas_CV.pdf"} 
+                href={contact.cvUrl || `${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`} 
                 download="Hoja_de_Vida_Sebastian_Salas.pdf" 
                 style={{ textDecoration: 'none', color: 'inherit', fontWeight: 500 }} 
                 onMouseEnter={e => e.target.style.color = '#4ade80'} 
@@ -80,7 +80,7 @@ const Contact = () => {
             <motion.a 
               whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(0, 242, 254, 0.3)' }}
               whileTap={{ scale: 0.95 }}
-              href={contact.cvUrl || "/Sebastian_Salas_CV.pdf"}
+              href={contact.cvUrl || `${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`}
               download="Hoja_de_Vida_Sebastian_Salas.pdf"
               className="btn btn-secondary"
               style={{ padding: '0.9rem 2.2rem', fontSize: '1.05rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}

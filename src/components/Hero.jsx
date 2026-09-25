@@ -53,7 +53,7 @@ const Hero = () => {
             <motion.a 
               whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(192, 132, 252, 0.4)' }}
               whileTap={{ scale: 0.96 }}
-              href={hero.cvUrl || "/Sebastian_Salas_CV.pdf"} 
+              href={hero.cvUrl || `${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`} 
               download="Hoja_de_Vida_Sebastian_Salas.pdf" 
               className="btn" 
               style={{ 

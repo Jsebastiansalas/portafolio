@@ -34,7 +34,7 @@ const Navbar = () => {
 
           {/* Quick CV Download in Navbar */}
           <a
-            href="/Sebastian_Salas_CV.pdf"
+            href={`${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`}
             download="Hoja_de_Vida_Sebastian_Salas.pdf"
             className="nav-link"
             style={{
@@ -77,7 +77,7 @@ const Navbar = () => {
         {/* Mobile Toggle */}
         <div className="mobile-only" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <a
-            href="/Sebastian_Salas_CV.pdf"
+            href={`${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`}
             download="Hoja_de_Vida_Sebastian_Salas.pdf"
             style={{
               color: 'var(--accent-cyan)',
@@ -123,7 +123,7 @@ const Navbar = () => {
               </a>
             ))}
             <a 
-              href="/Sebastian_Salas_CV.pdf"
+              href={`${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`}
               download="Hoja_de_Vida_Sebastian_Salas.pdf"
               onClick={() => setIsOpen(false)}
               className="mobile-nav-link"
