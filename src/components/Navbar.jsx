@@ -75,7 +75,7 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Toggle */}
-        <div className="mobile-only" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <div className="mobile-only">
           <a
             href={`${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`}
             download="Hoja_de_Vida_Sebastian_Salas.pdf"

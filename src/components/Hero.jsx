@@ -4,7 +4,7 @@ import { ArrowRight, Mail, FileDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
-  const { data } = useLanguage();
+  const { data, language } = useLanguage();
   const hero = data.hero;
 
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
           </motion.div>
           
           <h1 className="hero-title" style={{ marginBottom: '1.5rem', lineHeight: '1.15' }}>
-            {data.language === 'es' ? 'Hola, soy' : "Hi, I'm"} <br />
+            {language === 'es' ? 'Hola, soy' : "Hi, I'm"} <br />
             <span className="text-gradient">
               {hero.firstName} {hero.lastName}
             </span>
@@ -72,7 +72,7 @@ const Hero = () => {
               }}
             >
               <FileDown size={19} style={{ color: 'var(--accent-cyan)' }} /> 
-              {hero.btnCV || (data.language === 'es' ? 'Descargar Hoja de Vida' : 'Download CV')}
+              {hero.btnCV || (language === 'es' ? 'Descargar Hoja de Vida' : 'Download CV')}
             </motion.a>
 
             <motion.a 
