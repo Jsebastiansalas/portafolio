@@ -14,55 +14,75 @@ export const portfolioData = {
       { name: 'Contacto', href: '#contacto' },
     ],
     hero: {
+      status: "Enfocado en desarrollo de software & análisis de datos",
       role: "Desarrollador de Software Junior",
       firstName: "Sebastián",
       lastName: "Salas",
-      tagline: "Construyendo soluciones, aprendiendo de cada error y creciendo hacia el análisis de datos.",
-      btnProjects: "Ver proyectos",
-      btnContact: "Contactarme",
+      tagline: "Construyo soluciones digitales, aprendo de cada desafío y exploro el poder de los datos.",
+      btnProjects: "Explorar proyectos",
+      btnContact: "Hablemos",
       btnCV: "Descargar Hoja de Vida",
-      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`
+      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`,
+      githubUrl: "https://github.com/Jsebastiansalas",
+      linkedinUrl: "https://www.linkedin.com/in/sebasti%C3%A1n-salas-torres-317a4a425/"
     },
     about: {
       title: "Sobre",
       highlight: "Mí",
+      subtitle: "Un desarrollador con curiosidad insaciable, criterio técnico y mentalidad analítica.",
+      leadQuote: "Cada bug o desafío es una oportunidad invaluable para entender mejor los sistemas y diseñar soluciones óptimas.",
       paragraphs: [
-        "Me estoy formando como desarrollador de software junior. Soy un apasionado por la tecnología con un objetivo claro: especializarme en el área de análisis de datos en el futuro cercano.",
-        "Considero que mi mayor fortaleza es mi capacidad para aprender de los errores. Cada desafío o bug es una oportunidad para entender mejor los sistemas, buscar soluciones óptimas y seguir avanzando en mi carrera profesional."
+        "Me estoy formando con rigor como desarrollador de software junior. Me apasiona construir herramientas digitales confiables y tengo una meta clara: proyectarme y especializarme progresivamente en el campo del análisis de datos.",
+        "Considero que mi mayor fortaleza es mi capacidad para aprender de los errores. No busco parches temporales; analizo la causa raíz de cada problema para transformarlo en conocimiento sólido y duradero para mi carrera."
       ],
-      strengthsTitle: "Mis Fortalezas",
+      scrum: {
+        title: "Metodología Ágil & Scrum",
+        badge: "Trabajo en Equipo",
+        description: "Experiencia trabajando colaborativamente bajo el marco Scrum, gestionando sprints, estimación de tareas y comunicación constante. La alta cohesión de nuestro equipo nos permitió entregar a tiempo y obtener la mejor calificación del grupo."
+      },
+      strengthsTitle: "Pilares Profesionales",
       strengths: [
-        "Trabajo en equipo",
-        "Comunicación",
-        "Adaptabilidad",
-        "Responsabilidad",
-        "Compromiso",
+        "Aprendizaje continuo",
         "Resolución de problemas",
-        "Aprendizaje constante"
+        "Trabajo en equipo Scrum",
+        "Comunicación asertiva",
+        "Adaptabilidad rápida",
+        "Compromiso técnico",
+        "Atención al detalle"
       ]
     },
     skills: {
       title: "Habilidades y",
       highlight: "Tecnologías",
+      subtitle: "Herramientas con las que diseño, construyo y resuelvo problemas reales.",
+      filterAll: "Todas",
       categories: [
         {
+          id: "frontend",
           name: "Frontend",
           icon: Layout,
-          items: ["HTML5", "CSS3", "JavaScript"]
+          desc: "Construcción de interfaces modernas, accesibles y dinámicas.",
+          items: ["HTML5", "CSS3", "JavaScript (ES6+)"]
         },
         {
-          name: "Backend / Programación",
+          id: "backend",
+          name: "Backend / Lógica",
           icon: Server,
+          desc: "Estructuras de datos, orientación a objetos y lógica robusta.",
           items: ["Python", "Java"]
         },
         {
+          id: "tools",
           name: "Herramientas",
           icon: Terminal,
+          desc: "Control de versiones, flujo de trabajo y entornos de desarrollo.",
           items: ["Git", "GitHub", "VS Code"]
         },
         {
-          name: "Datos",
+          id: "data",
+          name: "Datos & SQL",
           icon: Database,
+          desc: "Modelado relacional, consultas estructuradas y persistencia.",
           items: ["SQL", "MySQL"]
         }
       ]
@@ -70,40 +90,56 @@ export const portfolioData = {
     projects: {
       title: "Proyectos",
       highlight: "Destacados",
+      subtitle: "Showcase de aplicaciones reales, código probado y soluciones orientadas a impacto.",
+      featuredBadge: "Proyecto Principal Destacado",
+      viewCode: "Ver en GitHub",
+      exploreDetails: "Detalles del Proyecto",
       items: [
         {
           id: "proyecto-sica",
+          featured: true,
           title: "Proyecto SICA",
+          category: "Sistema Empresarial",
+          badge: "Arquitectura & Backend",
           image: `${BASE}images/projects/sica.jpg`,
-          description: "Sistema Integral de Control y Administración (SICA). Plataforma diseñada para la optimización de procesos internos, gestión de registros y control de flujo de datos con arquitectura modular y validaciones robustas.",
+          description: "Sistema Integral de Control y Administración (SICA). Plataforma diseñada para optimizar procesos internos, gestión de registros y validaciones de flujo de datos con arquitectura modular robusta.",
           technologies: ["Java", "SQL", "Git", "Arquitectura Modular"],
           myRole: "Desarrollador de Software",
-          learned: "Modelado relacional de datos, lógica de negocio robusta, control de excepciones y diseño de software estructurado.",
+          learned: "Modelado relacional de bases de datos, lógica de negocio desacoplada, control estricto de excepciones y diseño de software estructurado.",
           githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git"
         },
         {
           id: "formula-1",
+          featured: false,
           title: "Formula 1 Analytics App",
+          category: "Data & Analytics",
+          badge: "Telemetría & Estadísticas",
           image: `${BASE}images/projects/formula1.jpg`,
-          description: "Aplicación interactiva de telemetría y métricas de Fórmula 1. Permite explorar resultados de carreras, clasificaciones mundiales de pilotos y escuderías, tiempos por vuelta y análisis de rendimiento en pista.",
+          description: "Aplicación interactiva de telemetría y métricas de Fórmula 1. Consulta y visualiza en tiempo real posiciones de pilotos, comparativas de tiempos de vuelta y rendimiento de escuderías en pista.",
           technologies: ["JavaScript", "Python", "API REST", "Análisis de Datos"],
           myRole: "Desarrollador & Integración de Datos",
-          learned: "Consumo e integración de APIs complejas, transformación y filtrado de grandes datasets y renderizado dinámico de estadísticas.",
+          learned: "Consumo e integración de APIs complejas, transformación de datasets en el cliente y renderizado dinámico de estadísticas deportivas.",
           githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git"
         },
         {
           id: "acme-bank",
+          featured: false,
           title: "Acme Bank",
+          category: "Frontend Web",
+          badge: "Vanilla SPA",
           image: `${BASE}images/projects/acme-bank.jpg`,
-          description: "Plataforma de autogestión bancaria interactiva (SPA) construida con JavaScript puro. Permite apertura de cuentas, simulación de transacciones financieras en tiempo real y persistencia en el navegador.",
+          description: "Plataforma de autogestión bancaria interactiva (SPA) construida con JavaScript puro. Permite apertura de cuentas, simulación de transacciones en tiempo real y persistencia completa en el navegador.",
           technologies: ["JavaScript Vanilla", "HTML5", "CSS3", "LocalStorage"],
           myRole: "Desarrollador Frontend",
-          learned: "Manipulación avanzada del DOM, arquitectura SPA sin frameworks y gestión del estado y persistencia con LocalStorage.",
+          learned: "Manipulación avanzada del DOM, arquitectura de página única sin frameworks y gestión del estado y persistencia con LocalStorage.",
           githubUrl: "https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2"
         },
         {
           id: "delivery-bot",
+          featured: false,
           title: "DeliveryBot Telegram",
+          category: "Automatización & Cloud",
+          badge: "Bot & Webhooks",
           image: `${BASE}images/projects/deliverybot.jpg`,
           description: "Bot automatizado de Telegram diseñado para agilizar pedidos en cafeterías universitarias. Registra órdenes, procesa menús interactivos y sincroniza la base de datos en tiempo real mediante webhooks.",
           technologies: ["n8n", "Telegram Bot API", "Google Sheets API", "Webhooks"],
@@ -113,51 +149,85 @@ export const portfolioData = {
         }
       ]
     },
+    superpower: {
+      question: "¿Qué hago tan bien que podría ayudar a otros con eso?",
+      answer: "Aprender de los errores.",
+      subtitle: "Un ciclo iterativo de ingeniería para resolver problemas desde la raíz.",
+      description: "No le temo a equivocarme porque entiendo que cada error es una oportunidad invaluable de diagnóstico. Cuando algo falla, descompongo el sistema, comprendo la causa de raíz y convierto esa experiencia en un nuevo principio de solidez técnica.",
+      cycle: [
+        {
+          step: "01",
+          title: "Detección",
+          concept: "El fallo no es un obstáculo",
+          detail: "Capturar el bug o inconsistencia como una señal clara del sistema, sin frustración."
+        },
+        {
+          step: "02",
+          title: "Diagnóstico",
+          concept: "Análisis de causa raíz",
+          detail: "Trazar el flujo de datos y la lógica para comprender exactamente por qué ocurrió."
+        },
+        {
+          step: "03",
+          title: "Solución",
+          concept: "Corrección estructurada",
+          detail: "Implementar una solución definitiva, no un parche temporal superficial."
+        },
+        {
+          step: "04",
+          title: "Crecimiento",
+          concept: "Evolución técnica",
+          detail: "Integrar el aprendizaje al criterio profesional para construir código más resiliente."
+        }
+      ]
+    },
     formation: {
       title: "Formación y",
       highlight: "Trayectoria",
+      subtitle: "Bases académicas sólidas y entrenamiento técnico de alto impacto.",
       items: [
         {
           period: "2025",
           title: "Bachiller Académico",
           institution: "Colegio Siglo XXI",
+          badge: "Graduado con Honores",
           image: `${BASE}images/education/bachiller.jpg`,
-          desc: "Formación integral con bases sólidas en razonamiento lógico, matemáticas y método científico que despertaron mi pasión por el desarrollo de software."
+          desc: "Formación integral con bases sólidas en razonamiento lógico, matemáticas y método científico que despertaron mi pasión por el desarrollo de software.",
+          skills: ["Pensamiento Lógico", "Matemáticas", "Método Científico", "Disciplina Académica"]
         },
         {
           period: "2025 - 2026",
           title: "Tecnólogo en Desarrollo de Software (Full Stack)",
           institution: "Campuslands",
+          badge: "En Formación Avanzada",
           image: `${BASE}images/education/campuslands.jpg`,
-          desc: "Formación intensiva de alto rendimiento orientada a la industria. Dominio de algoritmos, estructuras de datos, programación Frontend & Backend, bases de datos y metodologías ágiles Scrum."
+          desc: "Formación intensiva de alto rendimiento orientada a la industria. Dominio de algoritmos, estructuras de datos, programación Frontend & Backend, bases de datos y metodologías ágiles Scrum.",
+          skills: ["Desarrollo Full Stack", "Algoritmos y Estructuras", "Bases de Datos SQL", "Metodologías Ágiles Scrum"]
         }
       ]
     },
-    superpower: {
-      question: "¿Qué hago tan bien que podría ayudar a otros con eso?",
-      answer: "Aprender de los errores.",
-      description: "No le temo a equivocarme porque entiendo que cada error es una oportunidad invaluable. Cuando algo falla, me detengo a entender qué sucedió, busco la solución de raíz y me aseguro de que ese aprendizaje se convierta en un nuevo escalón para seguir avanzando."
-    },
-    roadmap: {
-      title: "¿Hacia dónde",
-      highlight: "voy?",
-      statement: "Mi objetivo es crecer como desarrollador de software y especializarme progresivamente en análisis de datos."
-    },
     contact: {
-      title: "¿Tienes un proyecto o quieres conocer más sobre mi trabajo?",
-      highlight: "Contáctame",
+      title: "¿Construimos algo",
+      highlight: "interesante?",
+      subtitle: "Estoy abierto a oportunidades como desarrollador de software junior y proyectos donde el aprendizaje continuo y los datos agreguen valor real.",
       name: "Sebastián Salas",
       email: "juansebastiansalas29@gmail.com",
-      cvText: "Descargar CV Completo",
+      cvText: "Descargar Hoja de Vida (PDF)",
       cvUrl: `${BASE}Sebastian_Salas_CV.pdf`,
-      github: "https://github.com/Jsebastiansalas"
+      github: "https://github.com/Jsebastiansalas",
+      linkedin: "https://www.linkedin.com/in/sebasti%C3%A1n-salas-torres-317a4a425/",
+      sendEmailBtn: "Enviar un mensaje",
+      copyEmailBtn: "Copiar correo"
     },
     footer: {
-      copy: "Sebastian Salas. Todos los derechos reservados.",
-      madeWith: "Diseñado y desarrollado con dedicación"
+      role: "Desarrollador de Software Junior",
+      location: "Colombia",
+      timeLabel: "Hora local:",
+      copy: "Sebastián Salas. Diseñado y construido con precisión, pasión y React.",
+      backToTop: "Volver arriba"
     }
   },
-  
+
   en: {
     navLinks: [
       { name: 'Home', href: '#inicio' },
@@ -169,55 +239,75 @@ export const portfolioData = {
       { name: 'Contact', href: '#contacto' },
     ],
     hero: {
+      status: "Focused on software development & data analytics",
       role: "Junior Software Developer",
       firstName: "Sebastián",
       lastName: "Salas",
-      tagline: "Building solutions, learning from every mistake, and growing towards data analysis.",
-      btnProjects: "View projects",
-      btnContact: "Contact me",
-      btnCV: "Download Resume (CV)",
-      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`
+      tagline: "I build digital solutions, learn from every challenge, and explore the power of data.",
+      btnProjects: "Explore projects",
+      btnContact: "Let's talk",
+      btnCV: "Download Resume",
+      cvUrl: `${BASE}Sebastian_Salas_CV.pdf`,
+      githubUrl: "https://github.com/Jsebastiansalas",
+      linkedinUrl: "https://www.linkedin.com/in/sebasti%C3%A1n-salas-torres-317a4a425/"
     },
     about: {
       title: "About",
       highlight: "Me",
+      subtitle: "A developer driven by curiosity, technical craftsmanship, and an analytical mindset.",
+      leadQuote: "Every bug or challenge is an invaluable opportunity to better understand systems and design optimal solutions.",
       paragraphs: [
-        "I am training as a junior software developer. I am passionate about technology with a clear goal: to specialize in the field of data analysis in the near future.",
-        "I consider my greatest strength to be my ability to learn from mistakes. Every challenge or bug is an opportunity to better understand systems, find optimal solutions, and keep moving forward in my professional career."
+        "I am training rigorously as a junior software developer. I am passionate about crafting reliable digital tools, with a clear aspiration: to progressively specialize in data analysis.",
+        "I consider my greatest strength to be my ability to learn from mistakes. I don't look for superficial patches; I dissect the root cause to turn every bug into durable, long-term technical knowledge."
       ],
-      strengthsTitle: "My Strengths",
+      scrum: {
+        title: "Agile Methodology & Scrum",
+        badge: "Teamwork Excellence",
+        description: "Hands-on experience collaborating in agile sprints under the Scrum framework, managing sprint tasks, estimations, and ongoing team communication. Our high group synergy enabled us to deliver on time and achieve the top grade in our cohort."
+      },
+      strengthsTitle: "Core Principles",
       strengths: [
-        "Teamwork",
-        "Communication",
-        "Adaptability",
-        "Responsibility",
-        "Commitment",
-        "Problem Solving",
-        "Continuous Learning"
+        "Continuous learning",
+        "Problem solving",
+        "Scrum agile teamwork",
+        "Clear communication",
+        "Rapid adaptability",
+        "Technical ownership",
+        "Attention to detail"
       ]
     },
     skills: {
       title: "Skills &",
       highlight: "Technologies",
+      subtitle: "Tools I use to design, build, and solve real engineering challenges.",
+      filterAll: "All",
       categories: [
         {
+          id: "frontend",
           name: "Frontend",
           icon: Layout,
-          items: ["HTML5", "CSS3", "JavaScript"]
+          desc: "Modern, responsive, accessible, and reactive user interfaces.",
+          items: ["HTML5", "CSS3", "JavaScript (ES6+)"]
         },
         {
-          name: "Backend / Programming",
+          id: "backend",
+          name: "Backend / Logic",
           icon: Server,
+          desc: "Data structures, object-oriented design, and robust logic.",
           items: ["Python", "Java"]
         },
         {
+          id: "tools",
           name: "Tools",
           icon: Terminal,
+          desc: "Version control, workflow automation, and developer tooling.",
           items: ["Git", "GitHub", "VS Code"]
         },
         {
-          name: "Data",
+          id: "data",
+          name: "Data & SQL",
           icon: Database,
+          desc: "Relational database modeling, structured queries, and persistence.",
           items: ["SQL", "MySQL"]
         }
       ]
@@ -225,91 +315,141 @@ export const portfolioData = {
     projects: {
       title: "Featured",
       highlight: "Projects",
+      subtitle: "Showcase of real-world applications, tested code, and impact-driven solutions.",
+      featuredBadge: "Featured Flagship Project",
+      viewCode: "View on GitHub",
+      exploreDetails: "Project Details",
       items: [
         {
           id: "proyecto-sica",
+          featured: true,
           title: "Proyecto SICA",
+          category: "Enterprise System",
+          badge: "Architecture & Backend",
           image: `${BASE}images/projects/sica.jpg`,
-          description: "Integral Control and Management System (SICA). Platform designed for internal workflow optimization, records management, and data stream validation with modular architecture.",
+          description: "Integral Control and Management System (SICA). Platform engineered to streamline internal business workflows, records management, and data flow validation with modular architecture.",
           technologies: ["Java", "SQL", "Git", "Modular Architecture"],
           myRole: "Software Developer",
-          learned: "Relational data modeling, robust business logic, exception handling, and structured software architecture.",
+          learned: "Relational database modeling, decoupled business logic, strict exception handling, and structured software architecture.",
           githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git"
         },
         {
           id: "formula-1",
+          featured: false,
           title: "Formula 1 Analytics App",
+          category: "Data & Analytics",
+          badge: "Telemetry & Standings",
           image: `${BASE}images/projects/formula1.jpg`,
-          description: "Interactive Formula 1 telemetry and statistics web application. Explore race results, world driver and constructor standings, lap timings, and track performance analytics.",
+          description: "Interactive Formula 1 telemetry and statistics web application. Explores real-time driver standings, constructor points, lap time comparisons, and track performance analytics.",
           technologies: ["JavaScript", "Python", "REST API", "Data Analytics"],
           myRole: "Developer & Data Integration",
-          learned: "Complex sports API consumption, data manipulation and filtering of large datasets, and dynamic statistics rendering.",
+          learned: "Complex sports API consumption, client-side dataset transformation, and dynamic rendering of sports metrics.",
           githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git"
         },
         {
           id: "acme-bank",
+          featured: false,
           title: "Acme Bank",
+          category: "Frontend Web",
+          badge: "Vanilla SPA",
           image: `${BASE}images/projects/acme-bank.jpg`,
-          description: "Interactive single-page banking application (SPA) built with vanilla JavaScript. Features account opening, real-time transaction simulation, and persistent browser storage.",
+          description: "Interactive single-page banking application (SPA) built with pure vanilla JavaScript. Features account opening, live transaction simulations, and persistent browser storage.",
           technologies: ["Vanilla JavaScript", "HTML5", "CSS3", "LocalStorage"],
           myRole: "Frontend Developer",
-          learned: "Advanced DOM manipulation, framework-free SPA architecture, and state persistence with LocalStorage.",
+          learned: "Advanced DOM manipulation, framework-free single page architecture, and client-side persistence with LocalStorage.",
           githubUrl: "https://github.com/Jsebastiansalas/ProyectoAcmebank_JavaScript_Salas-Sebastian-Jaimes-Daniel2"
         },
         {
           id: "delivery-bot",
+          featured: false,
           title: "DeliveryBot Telegram",
+          category: "Automation & Cloud",
+          badge: "Bot & Webhooks",
           image: `${BASE}images/projects/deliverybot.jpg`,
-          description: "Automated Telegram bot created to speed up food ordering in university cafeterias. Registers customer orders, processes interactive menus, and synchronizes live database via webhooks.",
+          description: "Automated Telegram bot built to streamline food ordering in university cafeterias. Registers customer orders, processes interactive menus, and synchronizes live database via webhooks.",
           technologies: ["n8n", "Telegram Bot API", "Google Sheets API", "Webhooks"],
           myRole: "Developer / Automation Integrator",
-          learned: "Automated workflow orchestration, real-time event processing with webhooks, and cloud service integration.",
+          learned: "Automated workflow orchestration, real-time event handling via webhooks, and cloud service integration.",
           githubUrl: "https://github.com/Jsebastiansalas/-Proyecto_DeliveryBot_SebastianSalas"
-        }
-      ]
-    },
-    formation: {
-      title: "Education &",
-      highlight: "Trajectory",
-      items: [
-        {
-          period: "2025",
-          title: "High School Diploma",
-          institution: "Colegio Siglo XXI",
-          image: `${BASE}images/education/bachiller.jpg`,
-          desc: "Comprehensive education with solid foundations in logical reasoning, mathematics, and the scientific method that sparked my passion for software engineering."
-        },
-        {
-          period: "2025 - 2026",
-          title: "Technologist in Software Development (Full Stack)",
-          institution: "Campuslands",
-          image: `${BASE}images/education/campuslands.jpg`,
-          desc: "High-performance industry-focused immersive program. Mastery of algorithms, data structures, Frontend & Backend programming, relational databases, and Scrum methodologies."
         }
       ]
     },
     superpower: {
       question: "What do I do so well that I could help others with it?",
       answer: "Learning from mistakes.",
-      description: "I am not afraid of making mistakes because I understand that every error is an invaluable opportunity. When something fails, I stop to understand what happened, look for the root solution, and make sure that this learning becomes a new step to keep moving forward."
+      subtitle: "An iterative engineering cycle to solve problems from the root.",
+      description: "I am not afraid of making mistakes because I understand that every error is an invaluable diagnostic opportunity. When something fails, I deconstruct the system, identify the root cause, and turn that insight into a new benchmark of technical robustness.",
+      cycle: [
+        {
+          step: "01",
+          title: "Detection",
+          concept: "Failure is feedback",
+          detail: "Capturing the bug or inconsistency as a diagnostic signal from the system, without friction."
+        },
+        {
+          step: "02",
+          title: "Diagnosis",
+          concept: "Root cause analysis",
+          detail: "Tracing data flow and execution logic to understand precisely why the breakdown occurred."
+        },
+        {
+          step: "03",
+          title: "Resolution",
+          concept: "Structured fix",
+          detail: "Architecting a permanent solution rather than a fragile superficial patch."
+        },
+        {
+          step: "04",
+          title: "Evolution",
+          concept: "Technical mastery",
+          detail: "Embedding the breakthrough into engineering discipline to deliver more resilient software."
+        }
+      ]
     },
-    roadmap: {
-      title: "Where am I",
-      highlight: "going?",
-      statement: "My goal is to grow as a software developer and progressively specialize in data analysis."
+    formation: {
+      title: "Education &",
+      highlight: "Trajectory",
+      subtitle: "Solid academic foundations and high-intensity technical engineering.",
+      items: [
+        {
+          period: "2025",
+          title: "High School Diploma",
+          institution: "Colegio Siglo XXI",
+          badge: "Graduated with Honors",
+          image: `${BASE}images/education/bachiller.jpg`,
+          desc: "Comprehensive education with solid foundations in logical reasoning, mathematics, and the scientific method that sparked my passion for software engineering.",
+          skills: ["Logical Reasoning", "Mathematics", "Scientific Method", "Academic Discipline"]
+        },
+        {
+          period: "2025 - 2026",
+          title: "Technologist in Software Development (Full Stack)",
+          institution: "Campuslands",
+          badge: "Advanced Tech Degree",
+          image: `${BASE}images/education/campuslands.jpg`,
+          desc: "High-performance industry-focused immersive program. Mastery of algorithms, data structures, Frontend & Backend programming, relational databases, and Scrum methodologies.",
+          skills: ["Full Stack Development", "Algorithms & Data Structures", "SQL Databases", "Agile Scrum Methodologies"]
+        }
+      ]
     },
     contact: {
-      title: "Do you have a project or want to know more about my work?",
-      highlight: "Contact me",
+      title: "Shall we build something",
+      highlight: "remarkable?",
+      subtitle: "I am open to junior software development opportunities and high-impact projects where continuous learning and data drive meaningful results.",
       name: "Sebastián Salas",
       email: "juansebastiansalas29@gmail.com",
-      cvText: "Download Full Resume",
+      cvText: "Download Full Resume (PDF)",
       cvUrl: `${BASE}Sebastian_Salas_CV.pdf`,
-      github: "https://github.com/Jsebastiansalas"
+      github: "https://github.com/Jsebastiansalas",
+      linkedin: "https://www.linkedin.com/in/sebasti%C3%A1n-salas-torres-317a4a425/",
+      sendEmailBtn: "Send a message",
+      copyEmailBtn: "Copy email"
     },
     footer: {
-      copy: "Sebastian Salas. All rights reserved.",
-      madeWith: "Designed and developed with dedication"
+      role: "Junior Software Developer",
+      location: "Colombia",
+      timeLabel: "Local time:",
+      copy: "Sebastián Salas. Designed and engineered with precision, passion, and React.",
+      backToTop: "Back to top"
     }
   }
 };

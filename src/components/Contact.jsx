@@ -1,95 +1,149 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Code, FileDown } from 'lucide-react';
+import { Mail, FileDown, ArrowUpRight, Copy, Check, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { LinkedInIcon, GitHubIcon } from './Icons';
 
 const Contact = () => {
   const { data, language } = useLanguage();
   const contact = data.contact;
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(contact.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
 
   return (
-    <section id="contacto" className="section relative overflow-hidden">
-      <div className="container relative z-10">
+    <section id="contacto" className="section contact-section">
+      <div className="container">
         
+        {/* Contact Billboard Card */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          className="contact-billboard-card glass-panel"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="glass-panel contact-card"
-          style={{ padding: '3.5rem 2rem', maxWidth: '48rem', margin: '0 auto', borderRadius: '24px' }}
+          transition={{ duration: 0.7 }}
         >
-          <h2 style={{ fontSize: '2.25rem', fontWeight: 700, marginBottom: '0.75rem', lineHeight: '1.2' }}>
-            {contact.title}
-          </h2>
-          <h3 style={{ fontSize: '2.75rem', fontWeight: 800, color: 'var(--accent-cyan)', marginBottom: '2.5rem' }}>
-            {contact.highlight}
-          </h3>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', maxWidth: '340px', margin: '0 auto 2.5rem auto', textAlign: 'left' }}>
+          <div className="billboard-ambient-glow" />
+
+          <div className="billboard-header text-center">
+            <span className="section-eyebrow">06 // GET IN TOUCH</span>
+            <h2 className="billboard-title">
+              {contact.title} <span className="text-gradient-cyan">{contact.highlight}</span>
+            </h2>
+            <p className="billboard-subtitle mx-auto">
+              {contact.subtitle}
+            </p>
+          </div>
+
+          {/* Contact Direct Connection Grid */}
+          <div className="contact-methods-grid">
             
-            {/* Email item */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
-              <div style={{ padding: '0.75rem', background: 'rgba(0, 242, 254, 0.1)', borderRadius: '50%', color: 'var(--accent-cyan)' }}>
-                <Mail size={20} />
-              </div>
-              <a href={`mailto:${contact.email}`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 500 }} onMouseEnter={e => e.target.style.color = 'white'} onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}>
-                {contact.email}
-              </a>
-            </div>
-
-            {/* GitHub item */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
-              <div style={{ padding: '0.75rem', background: 'rgba(192, 132, 252, 0.1)', borderRadius: '50%', color: 'var(--accent-purple)' }}>
-                <Code size={20} />
-              </div>
-              <a href={contact.github} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', fontWeight: 500 }} onMouseEnter={e => e.target.style.color = 'white'} onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}>
-                github.com/Jsebastiansalas
-              </a>
-            </div>
-
-            {/* CV download item */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
-              <div style={{ padding: '0.75rem', background: 'rgba(74, 222, 128, 0.1)', borderRadius: '50%', color: '#4ade80' }}>
-                <FileDown size={20} />
-              </div>
-              <a 
-                href={contact.cvUrl || `${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`} 
-                download="Hoja_de_Vida_Sebastian_Salas.pdf" 
-                style={{ textDecoration: 'none', color: 'inherit', fontWeight: 500 }} 
-                onMouseEnter={e => e.target.style.color = '#4ade80'} 
-                onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}
-              >
-                {contact.cvText || (language === 'es' ? 'Descargar Hoja de Vida (PDF)' : 'Download Resume (PDF)')}
-              </a>
-            </div>
-
-          </div>
-          
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <motion.a 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href={`mailto:${contact.email}`}
-              className="btn btn-primary"
-              style={{ padding: '0.9rem 2.5rem', fontSize: '1.05rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+            {/* 1. LinkedIn Card */}
+            <motion.a
+              whileHover={{ y: -4, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card-box interactive-element"
             >
-              <Mail size={18} /> {language === 'es' ? 'Enviar Mensaje' : 'Send Message'}
+              <div className="contact-box-icon box-icon-linkedin">
+                <LinkedInIcon size={24} />
+              </div>
+              <div className="contact-box-info">
+                <span className="box-platform-label">LinkedIn</span>
+                <span className="box-detail-text">Sebastián Salas Torres</span>
+              </div>
+              <ArrowUpRight size={18} className="box-arrow-indicator" />
             </motion.a>
 
-            <motion.a 
-              whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(0, 242, 254, 0.3)' }}
-              whileTap={{ scale: 0.95 }}
-              href={contact.cvUrl || `${import.meta.env.BASE_URL}Sebastian_Salas_CV.pdf`}
+            {/* 2. GitHub Card */}
+            <motion.a
+              whileHover={{ y: -4, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href={contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card-box interactive-element"
+            >
+              <div className="contact-box-icon box-icon-github">
+                <GitHubIcon size={24} />
+              </div>
+              <div className="contact-box-info">
+                <span className="box-platform-label">GitHub</span>
+                <span className="box-detail-text">@Jsebastiansalas</span>
+              </div>
+              <ArrowUpRight size={18} className="box-arrow-indicator" />
+            </motion.a>
+
+            {/* 3. Email Card */}
+            <motion.div
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="contact-card-box interactive-element"
+              onClick={handleCopyEmail}
+              style={{ cursor: 'pointer' }}
+            >
+              <div className="contact-box-icon box-icon-email">
+                <Mail size={24} />
+              </div>
+              <div className="contact-box-info">
+                <span className="box-platform-label">Email</span>
+                <span className="box-detail-text">{contact.email}</span>
+              </div>
+              <div className="box-copy-action" title="Copiar correo">
+                {copied ? <Check size={18} className="text-green" /> : <Copy size={18} />}
+              </div>
+            </motion.div>
+
+            {/* 4. CV Download Card */}
+            <motion.a
+              whileHover={{ y: -4, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href={contact.cvUrl}
               download="Hoja_de_Vida_Sebastian_Salas.pdf"
-              className="btn btn-secondary"
-              style={{ padding: '0.9rem 2.2rem', fontSize: '1.05rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+              className="contact-card-box box-highlight-cv interactive-element"
             >
-              <FileDown size={18} /> {language === 'es' ? 'Descargar CV' : 'Download CV'}
+              <div className="contact-box-icon box-icon-cv">
+                <FileDown size={24} />
+              </div>
+              <div className="contact-box-info">
+                <span className="box-platform-label">Curriculum Vitae</span>
+                <span className="box-detail-text">{contact.cvText}</span>
+              </div>
+              <ArrowUpRight size={18} className="box-arrow-indicator" />
             </motion.a>
+
           </div>
+
+          {/* Primary Action Button Row */}
+          <div className="billboard-actions-row">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              href={`mailto:${contact.email}`}
+              className="btn btn-primary-hero interactive-element"
+            >
+              <Mail size={18} />
+              <span>{contact.sendEmailBtn}</span>
+            </motion.a>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={handleCopyEmail}
+              className="btn btn-secondary-hero interactive-element"
+            >
+              {copied ? <Check size={18} className="text-green" /> : <Copy size={18} />}
+              <span>{copied ? (language === 'es' ? '¡Correo Copiado!' : 'Email Copied!') : contact.copyEmailBtn}</span>
+            </motion.button>
+          </div>
+
         </motion.div>
-        
+
       </div>
     </section>
   );
