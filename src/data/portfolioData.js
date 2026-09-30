@@ -106,7 +106,7 @@ export const portfolioData = {
           technologies: ["Java", "SQL", "Git", "Arquitectura Modular"],
           myRole: "Desarrollador de Software",
           learned: "Modelado relacional de bases de datos, lógica de negocio desacoplada, control estricto de excepciones y diseño de software estructurado.",
-          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git"
+          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica"
         },
         {
           id: "formula-1",
@@ -119,7 +119,7 @@ export const portfolioData = {
           technologies: ["JavaScript", "Python", "API REST", "Análisis de Datos"],
           myRole: "Desarrollador & Integración de Datos",
           learned: "Consumo e integración de APIs complejas, transformación de datasets en el cliente y renderizado dinámico de estadísticas deportivas.",
-          githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git"
+          githubUrl: "https://github.com/Jsebastiansalas/Formula-1"
         },
         {
           id: "acme-bank",
@@ -225,6 +225,31 @@ export const portfolioData = {
       timeLabel: "Hora local:",
       copy: "Sebastián Salas. Diseñado y construido con precisión, pasión y React.",
       backToTop: "Volver arriba"
+    },
+    search: {
+      defaultQuery: "sebastián salas desarrollador de software junior",
+      buttonSearch: "Buscar",
+      buttonLucky: "Me siento afortunado",
+      tabs: ["Todo", "Proyectos", "Tecnologías", "Formación", "Contacto"],
+      footerLinks: ["Sobre mí", "Privacidad", "Términos", "Colombia"],
+      peopleAlsoAsk: [
+        {
+          q: "¿Qué hace Sebastián Salas?",
+          a: "Sebastián Salas es un desarrollador de software junior enfocado en desarrollo full stack y análisis de datos. Construye soluciones digitales confiables usando JavaScript, Python, Java, SQL y tecnologías modernas."
+        },
+        {
+          q: "¿Qué es el proyecto SICA?",
+          a: "SICA (Sistema Integral de Control y Administración) es su proyecto principal: una plataforma empresarial modular en Java y SQL para optimizar procesos internos, gestión de registros y validación de flujos de datos con arquitectura robusta."
+        },
+        {
+          q: "¿Dónde ver su código?",
+          a: "Todo su código está disponible en GitHub: github.com/Jsebastiansalas. Incluye proyectos como SICA, Formula 1 Analytics, Acme Bank SPA y DeliveryBot Telegram."
+        },
+        {
+          q: "¿Qué tecnologías maneja?",
+          a: "Domina Frontend (HTML5, CSS3, JavaScript ES6+), Backend (Python, Java), Herramientas (Git, GitHub, VS Code) y Datos & SQL (SQL, MySQL). Actualmente se especializa en análisis de datos."
+        }
+      ]
     }
   },
 
@@ -331,7 +356,7 @@ export const portfolioData = {
           technologies: ["Java", "SQL", "Git", "Modular Architecture"],
           myRole: "Software Developer",
           learned: "Relational database modeling, decoupled business logic, strict exception handling, and structured software architecture.",
-          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica.git"
+          githubUrl: "https://github.com/Jsebastiansalas/proyecto-sica"
         },
         {
           id: "formula-1",
@@ -344,7 +369,7 @@ export const portfolioData = {
           technologies: ["JavaScript", "Python", "REST API", "Data Analytics"],
           myRole: "Developer & Data Integration",
           learned: "Complex sports API consumption, client-side dataset transformation, and dynamic rendering of sports metrics.",
-          githubUrl: "https://github.com/Jsebastiansalas/Formula-1.git"
+          githubUrl: "https://github.com/Jsebastiansalas/Formula-1"
         },
         {
           id: "acme-bank",
@@ -450,6 +475,31 @@ export const portfolioData = {
       timeLabel: "Local time:",
       copy: "Sebastián Salas. Designed and engineered with precision, passion, and React.",
       backToTop: "Back to top"
+    },
+    search: {
+      defaultQuery: "sebastián salas junior software developer",
+      buttonSearch: "Search",
+      buttonLucky: "I'm Feeling Lucky",
+      tabs: ["All", "Projects", "Technologies", "Education", "Contact"],
+      footerLinks: ["About", "Privacy", "Terms", "Colombia"],
+      peopleAlsoAsk: [
+        {
+          q: "What does Sebastián Salas do?",
+          a: "Sebastián Salas is a junior software developer focused on full stack development and data analytics. He builds reliable digital solutions using JavaScript, Python, Java, SQL, and modern technologies."
+        },
+        {
+          q: "What is the SICA project?",
+          a: "SICA (Integral Control and Management System) is his flagship project: an enterprise platform in Java and SQL to streamline internal workflows, records management, and data flow validation with modular architecture."
+        },
+        {
+          q: "Where to see his code?",
+          a: "All his code is available on GitHub: github.com/Jsebastiansalas. Includes projects like SICA, Formula 1 Analytics, Acme Bank SPA, and DeliveryBot Telegram."
+        },
+        {
+          q: "What technologies does he use?",
+          a: "He masters Frontend (HTML5, CSS3, JavaScript ES6+), Backend (Python, Java), Tools (Git, GitHub, VS Code), and Data & SQL (SQL, MySQL). Currently specializing in data analytics."
+        }
+      ]
     }
   }
 };
